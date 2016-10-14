@@ -1,0 +1,31 @@
+{% comment %}First, select the list of publications to use based on the assigned value to include.category.
+Defaults to the first list in _jekyll-bib/
+{% endcomment %}
+{% if include.category %}
+  {% assign results = site.jekyll-bib | where:"slug",include.category %}
+{% else %}
+  {% assign results = site.jekyll-bib[0] %}
+{% endif %}
+
+{% assign results = results[0].publications %}
+
+{% comment %}Next, search for single publication, if necessary{% endcomment %}
+{% if include.citekey %}
+  {% assign results = results | where:"citekey",include.citekey %}
+{% endif %}
+
+{% comment %}Create string for view filename{% endcomment %}
+{% if include.view %}
+  {% capture view %}jekyll-bib/views/{{include.view}}.html{% endcapture %}
+{% else %}
+  {% capture view %}jekyll-bib/views/{{page.bib-view}}.html{% endcapture %}
+{% endif %}
+
+{% if include.style %}
+  {% assign style = include.style %}
+{% else %}
+  {% assign style = page.bib-style %}
+{% endif %}
+
+{% comment %}Pass control to the view{% endcomment %}
+{% include {{view}} style=style %}
