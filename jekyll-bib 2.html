@@ -1,0 +1,52 @@
+---
+title: JekyllBib
+---
+
+<h2>Here is the test page for JekyllBib</h2>
+
+<h4>The code</h4>
+<code>{% raw %}{% include jekyll-bib.html category="scrim_publications" %}{% endraw %}</code>
+
+<h4>The result</h4>
+{% include jekyll-bib.html category="scrim_publications" %}
+
+<br><br><hr><hr>
+
+<h4>The code</h4>
+<code>{% raw %}{% include jekyll-bib.html category="scrim_publications" view="year-author" %}{% endraw %}</code>
+
+<h4>The result</h4>
+{% include jekyll-bib.html category="scrim_publications" view="year-author" %}
+
+<br><br><hr><hr>
+
+<h4>The code</h4>
+<code>{% raw %}{% include jekyll-bib.html category="scrim_publications" view="csv" style="csv" %}{% endraw %}</code>
+
+<h4>The result</h4>
+{% include jekyll-bib.html category="scrim_publications" view="csv" style="csv" %}
+
+<br><br><hr><hr>
+
+<h4>The code</h4>
+<code>{% raw %}{% include jekyll-bib.html category="scrim_publications" citekey="Evenson2009-qy" view="reference" %}{% endraw %}</code>
+
+<h4>The result</h4>
+{% include jekyll-bib.html category="scrim_publications" citekey="Evenson2009-qy" view="reference" %}
+
+<br><br><hr><hr>
+
+<h4>The code</h4>
+<code>{% raw %}{% include jekyll-bib.html category="scrim_publications" citekey="Evenson2009-qy" view="single-item-page" %}{% endraw %}</code>
+
+<h4>The result</h4>
+{% include jekyll-bib.html category="scrim_publications" citekey="Evenson2009-qy" view="single-item-page" %}
+
+<br><br><hr><hr>
+
+<h4>The code</h4>
+<code>{% raw %}{% include jekyll-bib.html category="" view="" style="" %}{% endraw %}</code>
+
+{% assign test = '' %}
+{% if test %}test true{% endif %}<br>
+{% if bluebee %}bluebee{% endif %}<br>

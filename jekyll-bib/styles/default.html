@@ -1,0 +1,12 @@
+{% assign pubtype = result.pubtype | downcase %}
+{% capture reference-output %}<p>
+{% case pubtype %}
+{% else %}
+{% include jekyll-bib/formatting/auth-year-block.html %}
+<strong>{{result.title}}</strong>,
+{% include jekyll-bib/formatting/journal-booktitle-conference-block.html %},
+{% endcase %}
+.</p>
+{% endcapture %}
+
+{% include jekyll-bib/formatting/clean-punc.html clean-string=reference-output %}

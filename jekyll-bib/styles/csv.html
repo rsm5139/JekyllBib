@@ -1,0 +1,30 @@
+{% capture item %}
+{% for a in result.author %}
+{% unless forloop.first %};{% endunless %}
+{{a.first}} {{a.last}}
+{% endfor %},
+"{{result.title}}",
+{{result.year}},
+{{result.month}},
+{{result.day}},
+{{result.journal}},
+{{result.journalfull}},
+"{{result.booktitle}}",
+{{result.volume}},
+{{result.number}},
+{{result.issue}},
+{{result.url}},
+{{result.doi}},
+{{result.pages}},
+{{result.issn}},
+{{result.pubtype}},
+{{result.kind}},
+{{result.citekey}},
+{% for e in result.editor %}
+{% unless forloop.first %};{% endunless %}
+{{e.first}} {{e.last}}
+{% endfor %}
+<br>
+{% endcapture %}
+
+{{ item | strip | strip_newlines }}

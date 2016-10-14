@@ -1,0 +1,4 @@
+{% comment %}
+Cleans common punctuation issues that arise
+{% endcomment %}
+{{include.clean-string | strip | strip_newlines | replace:'  ',' ' | replace:'  ',' ' | replace:', ',',' | replace:': ',':' | replace:'. ','.' | replace:',,',',' | replace:',,',',' | replace:'..','.' | replace:'..','.' | replace:',.','.' | replace:':,',':' | replace:':.','.' | replace:'.,','.' | replace:':',': ' | replace:',',', ' | replace:', ”',',"' | replace:'. "','."'}}

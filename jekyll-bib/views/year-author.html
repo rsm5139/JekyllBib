@@ -1,0 +1,13 @@
+{% comment %}Sort the references by year{% endcomment %}
+{% assign results = results | sort:"year" | reverse %}
+{% capture style %}jekyll-bib/styles/{{include.style}}.html{% endcapture %}
+
+{% assign current-year = 0000 %}
+
+{% for result in results %}
+  {% if current-year != result.year %}
+    {% assign current-year = result.year %}
+    <h3>{{result.year}}</h3>
+    {% include {{style}} %}
+  {% endif %}
+{% endfor %} 

@@ -1,0 +1,12 @@
+{% capture formatted-journal-block %}
+{% if result.journalfull %}
+<i>{{result.journalfull}}</i>,
+{% elsif result.journal %}
+<i>{{result.journal}}</i>,
+{% endif %}
+{% if result.volume %}<strong>{{result.volume}}</strong>{% endif %}
+{% if result.issue %}({{result.issue}}){% endif %},
+{{result.pages}},
+{% endcapture %}
+
+{% include jekyll-bib/formatting/clean-punc.html clean-string=formatted-journal-block %}

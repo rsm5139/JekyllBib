@@ -1,0 +1,7 @@
+{% if result.journal %}
+{% include jekyll-bib/formatting/journal-block.html %}
+{% elsif result.booktitle %}
+{% include jekyll-bib/formatting/booktitle-block.html %}
+{% elsif result.conference %}
+{% include jekyll-bib/formatting/conference-block.html %}
+{% endif %}

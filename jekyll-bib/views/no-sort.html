@@ -1,0 +1,4 @@
+{% capture style %}jekyll-bib/styles/{{include.style}}.html{% endcapture %}
+{% for result in results %}
+  {% include {{style}} %}
+{% endfor %}
