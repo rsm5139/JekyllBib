@@ -1,10 +1,9 @@
 {% comment %}First, select the list of publications to use based on the assigned value to include.category.
-Defaults to the first list in _jekyll-bib/
 {% endcomment %}
 {% if include.category %}
   {% assign results = site.jekyll-bib | where:"slug",include.category %}
 {% else %}
-  {% assign results = site.jekyll-bib[0] %}
+  {% assign results = site.jekyll-bib | where:"slug",page.bib-collection %}
 {% endif %}
 
 {% assign results = results[0].publications %}

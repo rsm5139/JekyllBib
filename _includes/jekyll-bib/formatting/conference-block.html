@@ -1,0 +1,11 @@
+{% capture formatted-conference-block %}
+{% if result.conference and result.conference != '' %}
+<i>{{result.conference}}</i>,
+{% endif %}
+{% if result.conference_location and result.conference_location != '' %}
+<strong>{{result.conference_location}}</strong>,
+{% elsif result.address and result.address != '' %}
+{{result.address}}
+{% endcapture %}
+
+{% include jekyll-bib/formatting/clean-punc.html clean-string=formatted-conference-block %}

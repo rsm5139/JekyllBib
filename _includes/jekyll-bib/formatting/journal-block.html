@@ -1,12 +1,12 @@
 {% capture formatted-journal-block %}
-{% if result.journalfull %}
+{% if result.journalfull and result.journalfull != '' %}
 <i>{{result.journalfull}}</i>,
-{% elsif result.journal %}
+{% elsif result.journal and result.journal != '' %}
 <i>{{result.journal}}</i>,
 {% endif %}
-{% if result.volume %}<strong>{{result.volume}}</strong>{% endif %}
-{% if result.issue %}({{result.issue}}){% endif %},
-{{result.pages}},
+{% if result.volume and result.volume != '' %}<strong>{{result.volume}}</strong>{% endif %}
+{% if result.issue and result.issue != '' %}({{result.issue}}){% endif %},
+{% if result.pages and result.pages != '' %}{{result.pages}},{% endif %}
 {% endcapture %}
 
 {% include jekyll-bib/formatting/clean-punc.html clean-string=formatted-journal-block %}

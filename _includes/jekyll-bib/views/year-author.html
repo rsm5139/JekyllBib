@@ -4,10 +4,17 @@
 
 {% assign current-year = 0000 %}
 
-{% for result in results %}
-  {% if current-year != result.year %}
-    {% assign current-year = result.year %}
-    <h3>{{result.year}}</h3>
-    {% include {{style}} %}
+{% capture years %}{% for result in results %}{% unless forloop.first %};{% endunless %}{{result.year}}{% endfor %}{% endcapture %}
+
+{% assign years = years | strip_newlines | split: ';' %}
+
+{% for y in years | sort | reverse %}
+  {% if current-year != y %}
+    {% assign current-year = y %}
+    {% assign subset = results | where:"year",current-year | sort:"author-formatted" %}
+    <h3>{{current-year}}</h3>
+    {% for result in subset %}
+      {% include {{style}} %}
+    {% endfor %}
   {% endif %}
 {% endfor %} 

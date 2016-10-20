@@ -1,0 +1,9 @@
+{% capture doi-block %}
+{% if result.doi and result.doi != '' %}
+DOI: <a href="http://dx.doi.org/{{result.doi}}">{{result.doi}}</a>
+{% elsif result.url and result.url != '' %}
+<a href="{{result.doi}}">{{result.url}}</a>
+{% endif %}
+{% endcapture %}
+
+{{doi-block | strip | strip_newlines}}

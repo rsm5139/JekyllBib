@@ -1,5 +1,5 @@
 ---
-title: scrim_publications
+title: my-publications
 publications: [{
     "url": "http://www.geosociety.org/gsatoday/archive/19/12/abstract/i1052-5173-19-12-4.htm",
     "doi": "10.1130/GSATG72A.1",

@@ -1,0 +1,23 @@
+{% assign result = results[0] %}
+
+<h2>{{result.title}}</h2>
+
+<p>{% include jekyll-bib/formatting/author-names.html %}</p>
+
+{% if result.journalfull and result.journalfull != '' %}
+<p><i>{{result.journalfull}}</i> ({{result.year}})</p>
+{% elsif result.journal and result.journal != '' %}
+<p><i>{{result.journal}}</i> ({{result.year}})</p>
+{% elsif result.booktitle and result.journal != '' %}
+<p><i>{{result.booktitle}}</i> ({{result.year}})</p>
+{% endif %}
+
+{% if result.doi and result.doi != '' %}<p><b>DOI:</b> <a href="http://dx.doi.org/{{ result.doi }}" target="_blank">{{ result.doi }}</a></p>
+{% elsif result.url and result.url != '' %}<p><b>URL:</b> <a href="{{ result.url }}" target="_blank">{{ result.url }}</a></p>{% endif %}
+
+{% if result.abstract and result.abstract != '' %}<p>{{ result.abstract }}</p>{% else %}<p><i>no abstract available</i></p>{% endif %}
+
+{% if result.keywords and result.keywords != '' %}<p><b>keywords:</b> {{ result.keywords }}</p>{% endif %}
+
+  </div>
+</div>

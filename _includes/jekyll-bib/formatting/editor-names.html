@@ -1,0 +1,26 @@
+{% comment %}
+Editor format
+"editor": [
+    {
+        "initials": "LE",
+        "first": "Logan E",
+        "formatted": "Mitchell LE",
+        "last": "Mitchell"
+    }, {
+        "formatted": "The Intergovernmental Panel on Climate Change",
+        "collective": "The Intergovernmental Panel on Climate Change"
+    }]
+{% endcomment %}
+{% capture ed-string %}
+{% for a in result.editor %}
+{% if forloop.first %}
+{% if a.collective %}{{a.collective}}{% elsif a.last %}{{a.last}}, {{a.initials}}{% else %}{{a.formatted}}{% endif %}
+{% elsif forloop.last %}
+{% if a.collective %} and {{a.collective}}{% elsif a.last %} and {{a.initials}} {{a.last}}{% else %} and {{a.formatted}}{% endif %}
+{% else %}
+{% if a.collective %}, {{a.collective}}{% elsif a.last %}, {{a.initials}} {{a.last}}{% else %}, {{a.formatted}}{% endif %}
+{% endif %}
+{% endfor %}
+{% endcapture %}
+
+{{ed-string | strip | strip_newlines}}

@@ -1,0 +1,12 @@
+{% capture formatted-booktitle-block %}
+{% if result.booktitle and result.booktitle != '' %}
+<i>{{result.booktitle}}</i>,
+{% endif %}
+{% if result.volume and result.volume != '' %}<strong>{{result.volume}}</strong>{% endif %}
+{% if result.issue and result.issue != '' %}({{result.issue}}){% endif %},
+{% if result.pages and result.pages != '' %}{{result.pages}},{% endif %},
+{% if result.publisher and result.publisher != '' %}{{result.publisher}},{% endif %}
+{% if result.editor %}{% include jekyll-bib/formatting/editor-names.html %}{% endif %}
+{% endcapture %}
+
+{% include jekyll-bib/formatting/clean-punc.html clean-string=formatted-booktitle-block %}
