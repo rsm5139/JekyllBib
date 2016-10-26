@@ -1,7 +1,7 @@
 {% comment %}First, select the list of publications to use based on the assigned value to include.category.
 {% endcomment %}
-{% if include.category %}
-  {% assign results = site.jekyll-bib | where:"slug",include.category %}
+{% if include.collection %}
+  {% assign results = site.jekyll-bib | where:"slug",include.collection %}
 {% else %}
   {% assign results = site.jekyll-bib | where:"slug",page.bib-collection %}
 {% endif %}
@@ -21,10 +21,12 @@
 {% endif %}
 
 {% if include.style %}
-  {% assign style = include.style %}
+  {% assign style-name = include.style %}
 {% else %}
-  {% assign style = page.bib-style %}
+  {% assign style-name = page.bib-style %}
 {% endif %}
+
+{% capture style %}jekyll-bib/styles/{{style-name}}.html{% endcapture %}
 
 {% comment %}Pass control to the view{% endcomment %}
 {% include {{view}} style=style %}
