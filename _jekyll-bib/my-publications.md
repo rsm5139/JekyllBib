@@ -76,7 +76,7 @@ publications: [{
         }
     ],
     "issn": "1052-5173",
-    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.1130/GSATG72A.1",
+    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=https://doi.org/10.1130/GSATG72A.1",
     "pubtype": "BOOK_CHAPTER",
     "citekey": "Evenson2009-qy",
     "labelsNamed": [
@@ -85,7 +85,7 @@ publications: [{
 },
 {
     "issue": "7549",
-    "url": "http://dx.doi.org/10.1038/nature14401",
+    "url": "https://doi.org/10.1038/nature14401",
     "doi": "10.1038/nature14401",
     "month": "4",
     "day": "30",
@@ -109,7 +109,7 @@ publications: [{
             "collective": "WAIS Divide Project Members (R.B. Alley is one of 78 authors)"
         }
     ],
-    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.1038/nature14401",
+    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=https://doi.org/10.1038/nature14401",
     "kind": "Research Article",
     "pubtype": "ARTICLE",
     "journal": "Nature",
@@ -122,7 +122,7 @@ publications: [{
 },
 {
     "issue": "227",
-    "url": "http://dx.doi.org/10.3189/2015jog14j237",
+    "url": "https://doi.org/10.3189/2015jog14j237",
     "doi": "10.3189/2015jog14j237",
     "year": "2015",
     "published": {
@@ -177,7 +177,7 @@ publications: [{
         }
     ],
     "issn": "0022-1430",
-    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.3189/2015jog14j237",
+    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=https://doi.org/10.3189/2015jog14j237",
     "pubtype": "ARTICLE",
     "citekey": "Orsi2015-ix",
     "journal": "Journal of Glaciology",
@@ -301,7 +301,7 @@ publications: [{
         }
     ],
     "issn": "2169-897X",
-    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.1002/2014JD022766",
+    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=https://doi.org/10.1002/2014JD022766",
     "pubtype": "ARTICLE",
     "journal": "Journal of Geophysical Research, D: Atmospheres",
     "citekey": "Mitchell2015-sz",
@@ -379,7 +379,7 @@ publications: [{
         }
     ],
     "issn": "0012-821X",
-    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=http://dx.doi.org/10.1016/j.epsl.2015.10.037",
+    "citedByLink": "http://scholar.google.com/scholar?hl=en&lr=&num=30&cites=https://doi.org/10.1016/j.epsl.2015.10.037",
     "pubtype": "ARTICLE",
     "journal": "Earth and planetary science letters",
     "citekey": "Muto2016-ri",
