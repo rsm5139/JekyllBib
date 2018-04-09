@@ -12,7 +12,7 @@
 <p><i>{{result.booktitle}}</i> ({{result.year}})</p>
 {% endif %}
 
-{% if result.doi and result.doi != '' %}<p><b>DOI:</b> <a href="http://dx.doi.org/{{ result.doi }}" target="_blank">{{ result.doi }}</a></p>
+{% if result.doi and result.doi != '' %}<p><b>DOI:</b> <a href="https://doi.org/{{ result.doi }}" target="_blank">{{ result.doi }}</a></p>
 {% elsif result.url and result.url != '' %}<p><b>URL:</b> <a href="{{ result.url }}" target="_blank">{{ result.url }}</a></p>{% endif %}
 
 {% if result.abstract and result.abstract != '' %}<p>{{ result.abstract }}</p>{% else %}<p><i>no abstract available</i></p>{% endif %}
